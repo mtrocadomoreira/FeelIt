@@ -6,7 +6,7 @@
 
     {{- /* Title */ -}}
     <h2 class="single-title" itemprop="name headline">
-        <a href="{{ $linksto }}"><i class="fas fa-info-circle"></i>&nbsp;&nbsp;{{ .Title }}</a>
+        <a href="{{ $linksto }}"><i class= "{{- $params.faIconCode | default "fas fa-info-circle" -}}" ></i>&nbsp;&nbsp;{{ .Title }}</a>
     </h2>
 
     {{- /* Summary content */ -}}
