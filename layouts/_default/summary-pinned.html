@@ -2,7 +2,7 @@
 
 <article class="summary-pinned" itemscope itemtype="http://schema.org/Article" {{ if ne .Site.Params.home.posts.imagePreview true }}data-image="hide"{{ end }}>
 
-    {{- $linksto := $params.pinLinksTo | default .Site.Home.RelPermalink -}}
+    {{- $linksto := $params.pinLinksTo | default .RelPermalink -}}
 
     {{- /* Title */ -}}
     <h2 class="single-title" itemprop="name headline">
@@ -11,7 +11,7 @@
 
     {{- /* Summary content */ -}}
     <a class="content" href="{{ $linksto }}">
-        {{- .Content -}}
+        {{- .Summary -}}
     </a>
 
 </article>
